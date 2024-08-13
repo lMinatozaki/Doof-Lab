@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        </style>
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        {#<img src="{{ url_for('static', filename='gracosoftlogo.png') }}" alt="Logo" class="logo">#}
+        <ul class="nav-links">
+            <li class="decoration"><a class="a-header" href="{{ url_for('showMenu')}}">Back to menu</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

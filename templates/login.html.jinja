@@ -1,0 +1,22 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    <form method="post">
+        <h1> {% block title %} Log in {% endblock %}</h1>
+        <div>
+            <label for="username">Username: </label>
+            <br>
+            <input type="text" name="username" required placeholder="Username">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <br>
+            <input type="text" name="password" required placeholder="password">
+        </div>
+        <br>
+        <button type="submit">Log in</button>
+        <br>
+        <p>Don't have an user? <a href="{{ url_for('register')}}">Register now!</a></p>
+    </form>
+{% endblock %}
