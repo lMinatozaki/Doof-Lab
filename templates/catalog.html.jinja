@@ -1,0 +1,44 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+<h1>Exam List</h1>
+
+<form method="GET">
+    <label for="category">Filter by Category: </label>
+    <select name="category" id="category">
+        <option value="">All Categories </option>
+        {% for category in categories %}
+            <option value="{{ category.name }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+    <label for="sampleType">Filter by Sample Type: </label>
+    <input type="text" name="sampleType" id="sampleType" placeholder="Enter Sample Type">
+    <button type="submit">Filter</button>
+</form>
+
+<table>
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Indication</th>
+        <th>Sample type</th>
+        <th>Price</th>
+    </tr>
+    {% for exam in exams %}
+    <tr>
+        <td>{{ exam.examID }}</td>
+        <td>{{ exam.name }}</td>
+        <td>{{ exam.category }}</td>
+        <td>{{ exam.indication }}</td>
+        <td>{{ exam.sampleType }}</td>
+        <td>{{ exam.price }}</td>
+        <td>
+            <a href="{{ url_for('getExamDetails', id=exam._id) }}">Consult</a>
+            <a href="{{ url_for('modifyExam', id=exam._id) }}">Modify</a>
+            <a href="{{ url_for('deleteExam', id=exam._id) }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

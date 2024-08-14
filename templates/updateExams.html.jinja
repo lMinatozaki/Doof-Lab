@@ -1,0 +1,49 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    <form method="POST" class="form">
+        <h1> {% block title %} Update exam {% endblock %}</h1>
+        <div>
+            <label id="name"> Exam name: </label>
+            <br>
+            <input type="text" name="name" 
+            placeholder={{exam.name}}>
+        </div>
+        <br>
+        <div>
+            <label id="categories"> Category: </label>
+            <br>
+            <select name="category">
+                {% for category in categories %}
+                    <option value="{{ category.name }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label id="indications"> Indications: </label>
+            <br>
+            <select name="indication">
+                {% for indication in indications %}
+                    <option value="{{ indication.description }}">{{ indication.description }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div>
+            <label id="sampleType"> Sample type: </label>
+            <br>
+            <input type="text" name="sampleType" 
+            placeholder={{exam.sampleType}}>
+        </div>
+        <br>
+        <div>
+            <label id="price"> Exam price: </label>
+            <br>
+            <input type="text" name="price" 
+            placeholder={{exam.price}}>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Update">
+        </div>
+    </form>
+{% endblock %}

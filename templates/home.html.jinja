@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        </style>
+    {% endblock %}
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="decoration"><a class="a-header" href="{{ url_for('registerF')}}">Register</a></li>
+            <li class="decoration"><a class="a-header" href="{{ url_for('loginF')}}">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <a name="header" id="header"></a>
+        <div class="header-content">
+            <div class="line"></div>
+                <a href="" class="a-see">Perry the platypus?</a>
+        </div>
+    </header>
+</body>
+</html>

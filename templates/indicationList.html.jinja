@@ -1,0 +1,14 @@
+{% extends 'base.html.jinja' %}
+
+{% block content %}
+    <h1> {% block title %} Indication list {% endblock %}</h1>
+    <ul>
+        {% for indication in indications %}
+            <div class="indication">
+                <p><b>Description: </b>{{indication.description}}</p>
+                <a href="/indication/modify/{{indication._id}}">Update</a> - <a href="/indication/delete/{{indication._id}}">Delete</a>
+            </div> 
+            <br>
+        {% endfor %}
+    </ul>
+{% endblock %}

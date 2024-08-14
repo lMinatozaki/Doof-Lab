@@ -1,0 +1,16 @@
+{% extends 'base.html.jinja' %}
+
+{% block content %}
+    <h1> {% block title %} Exam list {% endblock %}</h1>
+    <ul>
+        {% for exam in exams %}
+            <div class="exam">
+                <li> <b>Exam name: </b> <a href="/exam/details/{{exam._id}}">{{exam.name}}</a></li>
+                <p><b>Sample type: </b>{{exam.sampleType}}</p>
+                <p><b>Price: </b>{{exam.price}} Bs</p>
+                <a href="/exam/modify/{{exam._id}}">Update</a> - <a href="/exam/delete/{{exam._id}}">Delete</a>
+            </div> 
+            <br>
+        {% endfor %}
+    </ul>
+{% endblock %}

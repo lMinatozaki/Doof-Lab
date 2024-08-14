@@ -1,0 +1,22 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    <form method="POST" class="form">
+        <h1> {% block title %} Update category {% endblock %}</h1>
+        <div>
+            <label for="name"> Category name: </label>
+            <br>
+            <input type="text" name="categoryName" 
+            placeholder={{category.name}}>
+        </div>
+        <br>
+        <div>
+            <label for="code"> Description: </label>
+            <br>
+            <input type="text" name="categoryDescription" 
+            placeholder={{category.description}}>
+        </div>
+        <br>
+        <input type="submit" value="Update">
+    </form>
+{% endblock %}
