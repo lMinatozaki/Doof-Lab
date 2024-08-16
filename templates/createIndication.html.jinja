@@ -1,0 +1,17 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    <form method="POST" class="form">
+        <h1> {% block title %} Create indication {% endblock %}</h1>
+        <div>
+            <label for="desc"> Indication description: </label>
+            <br>
+            <input type="text" name="indicationDescription" 
+            placeholder="Indication description">
+        </div>
+        <br>
+        <button type="submit" class="btnH">Create</button>
+        <br>
+        <a href="{{ url_for('listIndications') }}">See list</a>
+    </form>
+{% endblock %}

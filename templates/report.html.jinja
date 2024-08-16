@@ -1,0 +1,40 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}Exam Report{% endblock %}
+
+{% block content %}
+    <h1>Exam Report</h1>
+
+    <h2>Category Counts</h2>
+    <table class="general-table">
+        <tr>
+            <th>Category</th>
+            <th>Count</th>
+        </tr>
+        {% for category, count in categoryCount.items() %}
+        <tr>
+            <td>{{ category }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div>
+        <h2>Most common exam indication</h2>
+        <p>{{ mostCommonIndication }}</p>
+    </div>
+    
+    <h2>Price Intervals</h2>
+    <table class="general-table">
+        <tr>
+            <th>Price Interval</th>
+            <th>Count</th>
+        </tr>
+        {% for interval, count in priceIntervals.items() %}
+        <tr>
+            <td>{{ interval }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

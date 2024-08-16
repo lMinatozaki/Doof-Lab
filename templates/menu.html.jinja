@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+            @import url('https://fonts.googleapis.com/css?family=Alfa Slab One');
+        </style>
+    {% endblock %}
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+    <body>
+        <nav class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo" style="margin-left: 5em;">
+        <ul class="nav-links">
+            <li class="decoration"><a class="a-header" href="{{ url_for('logout')}}">Logout</a></li>
+        </ul>
+    </nav>
+
+        <div class="container">
+        <h1 class="menuH1">
+            <a class="decoration" href="#menu">See menu options</a>
+        </h1>
+            
+        <div class="popover" id="menu">
+            <div class = 'content'>
+                <a href="#" class="close"></a>
+                    <div class = 'nav'>
+                        <ul class = 'nav_list'>
+                        <div class = 'nav_list_item'>
+                            <li><a href="{{url_for('createIndication')}}">Add indications</a></li>
+                        </div>
+                        <div class = 'nav_list_item'>
+                            <li><a href="{{url_for('createCategory')}}">Add categories</a></li>
+                        </div>
+                        <div class = 'nav_list_item'>
+                            <li><a href="{{url_for('createExam')}}">Add exams</a></li>
+                        </div>
+                        <div class = 'nav_list_item'>
+                            <li><a href="{{url_for('viewReport')}}">See report</a></li>
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </body>
+</html>

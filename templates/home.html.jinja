@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Doof-Exam-inator Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.0/css/bulma.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+        <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    </head>
+    <body>
+        <section class="hero is-info is-medium is-bold">
+            <div class="hero-head">
+                <nav class="navbar" style="background-color: #3c027f;">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item" href="">
+                                <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                            </a>
+                            <span class="navbar-burger burger" data-target="navbarMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <div class="tabs is-right">
+                                    <ul>
+                                        <li><a href="{{ url_for('showHome') }}" style="color: #FFFFFF;">Home</a></li>
+                                        <li><a href="" style="color: #FFFFFF;">Register</a></li>
+                                    </ul>
+                                    <span class="navbar-item">
+                                        <a class="button is-white is-outlined" href="{{ url_for('loginF') }}">
+                                            <span class="icon">
+                                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span title="Login" href="{{ url_for('loginF') }}">Login</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="hero-body" style="background-color: #3c027f;">
+                <div class="container has-text-centered">
+                    <h1 class="title">
+                        Behold my new evil scheme, the Doof-Exam-inator!
+                    </h1>
+                    <h2 class="subtitle">
+                        Doof-Exam-inator is a website where users can manage theirs exams & services. We use the latest technology to bring you the best service in the world.
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <div class="box cta">
+            <p class="has-text-centered">
+                <i class="fa fa-ban" aria-hidden="true" style="color: rgb(212, 0, 0);"></i> Curse you, Perry the Platypus!
+            </p>
+        </div>
+        <section class="container">
+            <div class="columns features">
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/03/Perry-and-Dr.-Doofenshmirtz-Last-Day-of-Summer-e1646905354238.jpeg" alt="Description">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h4> Perry the platypus! </h4>
+                                <p>He's a semiaquatic
+                                    <br>
+                                    Egg laying mammal of action
+                                    <br>
+                                    He's a furry little flatfoot
+                                    <br>
+                                    Who'll never flinch from a fray
+                                    <br>
+                                    He's got more than just mad skill
+                                    <br>
+                                    He's got a beaver tail and bill
+                                    <br>
+                                    And the women swoon
+                                    <br>
+                                    Whenever they hear him say -
+                                    <br>
+                                    He's Perry, Perry the Platypus
+                                    <br>
+                                    (You can call him Agent P)
+                                    <br>   
+                                    Perry 
+                                    <br>
+                                    (I said you can call him Agent P)
+                                    <br>
+                                    Agent P</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <img src="https://fiu-original.b-cdn.net/fontsinuse.com/use-images/122/122013/122013.png?filename=Captura%20de%20VLC_2020-09-26-20h46m09s582.png" alt="Description">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h4>Our instalations</h4>
+                                <p>Located in the center of Danville, at 9297 Polly Parkway. This large building is the main and most often seen building of Doofenshmirtz Evil Incorporated. It functions as both the main lab of Doofenshmirtz's plans and his home.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card is-shady">
+                        <div class="card-image has-text-centered">
+                            <img src="https://fiu-original.b-cdn.net/fontsinuse.com/use-images/122/122025/122025.png?filename=Captura%20de%20VLC_2020-09-27-15h17m42s254.png" alt="Description">
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <h4> Meet Dr. Heinz Doofenshmirtz! </h4>
+                                <p>Heinz Doofenshmirtz, also known as Dr. Doofenshmirtz, Doof, is a 47 year old evil scientist hailing from the country of Drusselstein. The head of Doofenshmirtz Evil Incorporated, he tends not to be evil in the traditional sense, but rather overly dramatic, eccentric and generally clueless. His usual lair is an office building that he apparently owns, though he has worked from other locations when necessary for his plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sandbox">
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical is-8">
+                        <div class="tile">
+                            <div class="tile is-parent">
+                                <article class="tile is-child notification is-white">
+                                    <p class="title">Grrrrrrrrrrrrrr</p>
+                                    <div class="video-container">
+                                        <iframe width="800" height="315" src="https://www.youtube.com/embed/G44Lono1xkc?si=0n8psC7y5lleBSym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" style="background-color: #3c027f;"> 
+                <div class="content has-text-centered"> 
+                    <p style="color: #FFFFFF;">August, 2024.</p> 
+            
+                </div> 
+            
+            <div class="columns"> 
+                <!-- Column 1 -->
+                <div class="column"> 
+            
+                <h4 class="bd-footer-title  
+                            has-text-weight-medium 
+                            has-text-left" style="color: #FFFFFF;"> 
+                    Designed by 
+                </h4> 
+            
+                <p class="bd-footer-link  
+                            has-text-left" style="color: #FFFFFF;"> 
+                    GracoSoft's student, Daniela Figueroa. 
+                </p> 
+            
+                </div> 
+            
+                <!-- Column 2 (Empty)-->
+                <div class="column"> 
+                <h4 class="bd-footer-title  
+                            has-text-weight-medium  
+                            has-text-justify"> 
+                </h4> 
+            
+                <p class="bd-footer-link"> 
+                    <a href=""> 
+                    <span class="icon-text"> 
+                        <span> </span> 
+                    </span> 
+                    </a> 
+                    <br/> 
+                </p>      
+                </div> 
+            
+                <!-- Column 3 -->
+                <div class="column"> 
+                    <h4 class="bd-footer-title 
+                                has-text-weight-medium 
+                                has-text-justify" style="color: #FFFFFF;"> 
+                        More projects 
+                    </h4> 
+                
+                    <!-- Column 3 lists with links -->
+                    <p class="bd-footer-link"> 
+                        <a href="https://github.com/lMinatozaki" style="color: #FFFFFF;"> 
+                        <span class="icon-text"> 
+                            <span>Github</span> 
+                        </span> 
+                        </a> 
+                        <br/> 
+                    </p> 
+                </div> 
+            </div> 
+        </footer>
+        <script src="{{ url_for('static', filename='bulma.js') }}"></script>
+    </body>
+</html>
