@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "66be316d8e22231e69b97e10"
+  },
+  "examID": "E3150",
+  "name": "aaaa",
+  "category": "probando 2",
+  "sampleType": "no seeee",
+  "price": 350,
+  "indication": "holaaaa"
+},
+{
+  "_id": {
+    "$oid": "66be3c8feaee56f843e7ff65"
+  },
+  "examID": "E1529",
+  "name": "a",
+  "category": "prueba",
+  "sampleType": "pookie sample",
+  "price": 150,
+  "indication": "probando"
+}]

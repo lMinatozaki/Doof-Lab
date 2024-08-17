@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "66bd0156dbb9ab8a5e3b3d21"
+  },
+  "name": "prueba",
+  "description": "probando create"
+},
+{
+  "_id": {
+    "$oid": "66bd04b97c60b6b268f91374"
+  },
+  "name": "probando 2",
+  "description": "chi"
+},
+{
+  "_id": {
+    "$oid": "66bd05d27257d55801e2dca4"
+  },
+  "name": "perry",
+  "description": "perry the platypus"
+}]
